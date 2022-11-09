@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'basic.java.web.java-application-conventions'
+}
+
+dependencies {
+    implementation 'org.apache.commons:commons-text'
+    implementation project(':utilities')
+    // https://mvnrepository.com/artifact/javax.servlet/servlet-api
+    compileOnly 'javax.servlet:servlet-api:2.5'
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'basic.java.web.app.App'
+}
